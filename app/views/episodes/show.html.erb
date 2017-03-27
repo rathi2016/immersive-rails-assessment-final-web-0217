@@ -7,5 +7,7 @@
 <ul>
   <% @episode.guests.each do |guest| %>
     <li><%= link_to guest.name, guest %></li>
+    <li>user_id:<%= session[:user_id]%></li>
+    <li><%= link_to "Edit your rating" , edit_appearance_path, method: :edit %></li>
   <% end %>
 </ul>
