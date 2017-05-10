@@ -15,6 +15,7 @@ class AppearancesController < ApplicationController
     @appearance.update(appearance_params)
     redirect_to new_appearance_path
   end
+
   def create
     @appearance = Appearance.new(appearance_params)
     @appearance.user_id = session[:user_id]
